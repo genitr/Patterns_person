@@ -1,8 +1,8 @@
 public class Person {
     protected final String name;
-    protected final String surname;
-    protected int age;
-    protected String address;
+    private final String surname;
+    private int age;
+    private String address;
 
     public Person(String name, String surname) {
         this.name = name;
@@ -50,7 +50,7 @@ public class Person {
     }
 
     public PersonBuilder newChildBuilder() {
-        return new PersonBuilder().setSurName(getSurname()).setAddress(getAddress()).setAge(12);
+        return new PersonBuilder().setSurName(getSurname()).setAddress(getAddress()).setAge(1);
     }
 
     @Override
